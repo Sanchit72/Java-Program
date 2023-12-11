@@ -1,21 +1,42 @@
+/*
+ write a java program which accept string from user and count number of capital character.
+ */
+import java.util.*;
+
 class StringDemo
 {
-    public static void main(String arg[])
+   
+        public static int countcapital(String str)
     {
-        String str1 = "Hello";
-        String str2 = new String("Hello");
-
-        String str3 = "Hello";
-        String str4 = "Marvellous";
-        String str5 = new String("Hello");
-        String str6 = new String("world");
-        String str7 = "Hello";
-        String str8 = "Demo";
-
-        System.out.println(str1);
-        System.out.println(str2);
-
-        System.out.println("Length of str1 is :"+str1.length());
-
+        int icnt = 0;
+        int count = 0;
+        char Arr[] = str.toCharArray()
+;        
+        for(icnt=0;icnt<Arr.length;icnt++)
+        {
+        if((Arr[icnt]>='A') && (Arr[icnt]<='Z'))
+        {
+            count++;
+        }
+        }
+        return count;
     }
-}
+    public static void main(String Arg[])
+    {
+        Scanner sobj =new Scanner(System.in);
+        int iRet = 0;
+
+        String str = null;
+
+        System.out.println("Enter your name :");
+        str = sobj.nextLine();
+
+       iRet = countcapital(str);
+
+       System.out.println("Number of capital character are :"+iRet);
+
+        
+    } 
+
+        
+    }
